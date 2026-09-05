@@ -1,5 +1,5 @@
 const startButton = document.getElementById("startButton");
 
 startButton.addEventListener("click", function () {
-    alert("Welcome to Rawan AI! 🌸");
+    window.location.href = "intro.html";
 });
