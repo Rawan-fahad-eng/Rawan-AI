@@ -1,8 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: hotpink;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffaf8;
+}
+
+/* الصفحة الرئيسية */
+.welcome-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background: #fffaf8;
+}
+
+/* الشكل الوردي المموج */
+.welcome-page::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -10%;
+
+    width: 120%;
+    height: 65%;
+
+    background: #f8dce5;
+
+    border-radius: 0 0 50% 50%;
+    transform: rotate(-3deg);
+}
+
+/* المحتوى */
+.welcome-page h1,
+.welcome-page h2,
+.welcome-page p,
+.welcome-page button {
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
-    color: blue;
-    font-size: 80px;
+    margin: 0 0 18px;
+
+    font-size: 58px;
+    letter-spacing: 1px;
+
+    color: #c77f96;
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 36px;
+    line-height: 1.3;
+
+    color: #51474a;
+}
+
+p {
+    max-width: 550px;
+    margin: 22px auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #756b6e;
+}
+
+/* الزر */
+button {
+    margin-top: 15px;
+
+    padding: 16px 38px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #d895aa;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(201, 127, 150, 0.2);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(201, 127, 150, 0.25);
 }
